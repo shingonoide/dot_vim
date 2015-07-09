@@ -1,4 +1,4 @@
 [submodule "bundle/Vundle.vim"]
-	path = /home/ruiandrada/.vim/bundle/Vundle.vim
+	path = bundle/Vundle.vim
 	url = http://github.com/gmarik/vundle.git
 	ignore = dirty
