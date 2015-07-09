@@ -1,0 +1,465 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"" Plugin 'user/L9', {'name': 'newL9'}
+
+Bundle 'wakatime/vim-wakatime'
+
+" utilities
+Plugin 'kien/ctrlp.vim' " fuzzy find files
+Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plugin 'benmills/vimux'
+" Plugin 'tpope/vim-fugitive' " the ultimate git helper
+Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
+
+" colorschemes
+" Plugin 'chriskempson/base16-vim'
+
+" JavaScript plugins
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+
+" Plugin 'MRU'
+Plugin 'snipMate'
+" Plugin 'FuzzyFinder'
+Plugin 'matchit.zip'
+" Plugin 'The-NERD-tree'
+" Plugin 'The-NERD-Commenter'
+" Plugin 'FindInNERDTree'
+" Plugin 'tComment'
+" Plugin 'Indent-Guides'
+" Plugin 'olethanh/openerp-snippets.vim'
+Bundle 'Yggdroot/indentLine'
+Plugin 'indentpython.vim'
+
+Plugin 'Syntastic'
+
+Bundle 'parkr/vim-jekyll'
+
+Plugin 'rvmprompt.vim'
+Plugin 'rvm.vim'
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+Plugin 'surround.vim'
+
+Plugin 'EasyMotion'
+
+Plugin 'sjl/badwolf'
+
+" Plugin 'chef.vim'
+
+" Plugin 'flazz/vim-colorschemes'
+
+Plugin 'jedverity/feral-vim'
+
+Plugin 'Chiel92/vim-autoformat'
+
+Plugin 'Tagbar'
+
+Plugin 'airblade/vim-gitgutter'
+
+Plugin 'bling/vim-airline'
+
+" vim-chef
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'vadv/vim-chef'
+
+" knife vim support
+Plugin 'thommay/knife-vim'
+
+" Berk vim
+Plugin 'markcornick/vim-berks'
+
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+
+Plugin 'chrisbra/SudoEdit.vim'
+
+" Plugin 'Valloric/YouCompleteMe'
+
+" Plugin 'terryma/vim-multiple-cursors'
+
+" Plugin 'taglist.vim'
+
+Plugin 'tpope/vim-unimpaired'
+
+" Plugin 'php.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
+
+Bundle 'joonty/vdebug.git'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" My shortcuts map
+
+
+
+
+" set number
+" set relativenumber
+" set tabstop=2
+" set shiftwidth=2
+" set expandtab
+" set toolbar=
+
+" nmap gf :new %:p:h/<cfile><CR>
+
+" map <A-1> :b1<cr>
+" map <A-2> :b2<cr>
+" map <A-3> :b3<cr>
+" map <A-4> :b4<cr>
+" map <A-5> :b5<cr>
+" map <A-6> :b6<cr>
+" map <A-7> :b7<cr>
+" map <A-8> :b8<cr>
+" map <A-9> :b9<cr>
+" map <A-0> :b10<cr>
+" map <S-F1> :b11<cr>
+" map <S-F2> :b12<cr>
+" map <S-F3> :b13<cr>
+" map <S-F4> :b14<cr>
+" map <S-F5> :b15<cr>
+" map <S-F6> :b16<cr>
+" map <S-F7> :b17<cr>
+" map <S-F8> :b18<cr>
+" map <S-F9> :b19<cr>
+" map <S-F10> :b20<cr>
+" map <S-F11> :b21<cr>
+" map <S-F12> :b22<cr>
+" map <C-Shift-B> :bdelete<cr>
+" nmap <leader><leader>B		:bdelete<cr>
+" map <F6> :buffers<cr>
+
+" map <F9> :NERDTreeToggle<cr>
+
+" map <F8> O/**<CR>
+" \* Descrição do arquivo<CR>
+" \* @author Rui Andrada <shingonoide@gmail.com><cr>
+" \* @created <esc>:r!date '+\%d/\%m/\%y'<cr>kJA<cr>
+" \*/
+
+" set incsearch
+" set hlsearch
+" nmap n nzz
+" nmap N Nzz
+
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+set guifont=Inconsolata-g\ for\ Powerline\ Medium\ 11
+
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
+
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" augroup CursorLine
+"   au!
+"   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+"   au WinLeave * setlocal nocursorline nocursorcolumn
+" augroup END
+
+" function! CleverTab()
+" if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+" return "\<Tab>"
+" else
+" return "\<C-X>\<C-O>"
+" endfunction
+" inoremap <Tab> <C-R>=CleverTab()<CR>
+" set completeopt=menu,preview
+
+" set shell=/bin/bash
+
+
+" colorscheme slate
+" colorscheme base16-railscasts
+
+" colorscheme base16-railscasts
+" colorscheme delek
+
+" colorscheme base16-atelierheath
+" colorscheme base16-atelierdune
+
+" colorscheme moss
+" colorscheme feral
+" colorscheme badwolf
+
+set nocompatible " not compatible with vi
+set autoread " detect when a file is changed
+
+" make backspace behave in a sane manner
+set backspace=indent,eol,start
+
+" set a map leader for more key combos
+let mapleader = '\'
+
+" Tab control
+set noexpandtab " tabs ftw
+set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=4 " the visible width of tabs
+set softtabstop=4 " edit as if the tabs are 4 characters wide
+set shiftwidth=4 " number of spaces to use for indent and unindent
+set shiftround " round indent to a multiple of 'shiftwidth'
+
+" set clipboard=unnamed
+
+" faster redrawing
+set ttyfast
+
+" code folding settings
+set foldmethod=syntax " fold based on indent
+set foldnestmax=10 " deepest fold is 10 levels
+set nofoldenable " don't fold by default
+set foldlevel=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => User Interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Toolbar
+set toolbar=
+
+" Searching
+set ignorecase " case insensitive searching
+set smartcase " case-sensitive if expresson contains a capital letter
+" set hlsearch
+set incsearch " set incremental search, like modern browsers
+set nolazyredraw " don't redraw while executing macros
+
+set magic " Set magic on, for regex
+
+set showmatch " show matching braces
+set mat=2 " how many tenths of a second to blink
+
+" switch syntax highlighting on
+syntax on
+
+set encoding=utf8
+let base16colorspace=256  " Access colors present in 256 colorspace"
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+set background=dark
+" colorscheme delek
+" let g:colors_name = 'badwolf'
+" colorscheme badwolf
+colorscheme feral
+
+set number
+set nowrap
+
+set autoindent " automatically set indent of new line
+set smartindent
+
+set laststatus=2 " show the satus line all the time
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" edit ~/.vimrc
+map <leader>ev :e ~/.vimrc<cr><cr>
+
+map <leader>wc :wincmd q<cr>
+
+map <leader>Jg  :VimuxRunCommand 'rake generate'<cr>
+map <leader>Jgd :VimuxRunCommand 'rake gen_deploy'<cr>
+map <leader>JP  :VimuxRunCommand 'rake preview'<cr>
+
+map <leader>zmR	:VimuxRunCommand 'sudo service deverp-deverpv8 restart'<cr>
+map <leader>zR	:!sudo service deverp-deverpv8 restart<cr>
+
+" moving up and down work as you would expect
+nnoremap <silent> j gj
+nnoremap <silent> k gk
+
+" helpers for dealing with other people's code
+nmap <leader><leader>t :set ts=4 sts=4 sw=4 noet<cr>
+nmap <leader><leader>s :set ts=4 sts=4 sw=4 et<cr>
+
+" space to command mode
+nmap <space> :
+
+nnoremap <Leader><Leader>B :bdelete<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <C-h> :call WinMove('h')<cr>
+map <C-j> :call WinMove('j')<cr>
+map <C-k> :call WinMove('k')<cr>
+map <C-l> :call WinMove('l')<cr>
+
+" Window movement shortcuts
+" move to the window in the direction shown, or create a new window
+function! WinMove(key)
+	let t:curwin = winnr()
+	exec "wincmd ".a:key
+	if (t:curwin == winnr())
+		if (match(a:key,'[jk]'))
+			wincmd v
+		else
+			wincmd s
+		endif
+		exec "wincmd ".a:key
+	endif
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=0
+" show hidden files in NERDTree
+let NERDTreeShowHidden=1
+" Toggle NERDTree
+nmap <silent> <leader>k :NERDTreeToggle<cr>
+" expand to the path of the file in the current buffer
+nmap <silent> <leader>y :NERDTreeFind<cr>
+
+" map fuzzyfinder (CtrlP) plugin
+nmap <silent> <leader>n :CtrlP<cr>
+nmap <silent> <leader>b :CtrlPBuffer<cr>
+nmap <silent> <leader>t :CtrlPBufTag<cr>
+nmap <silent> <leader>T :CtrlPBufTagAll<cr>
+nmap <silent> <leader>d :CtrlPBookmarkDir<cr>
+nmap <silent> <leader>m :CtrlPMRUFiles<cr>
+nmap <silent> <leader><leader>D :CtrlPBookmarkDirAdd<cr>
+" let g:ctrlp_map='<leader>t'
+let g:ctrlp_dotfiles=1
+let g:ctrlp_working_path_mode = 'ra'
+
+" CtrlP ignore patterns
+let g:ctrlp_custom_ignore = {
+			\ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
+			\ 'file': '\.exe$\|\.so$'
+			\ }
+
+" search the nearest ancestor that contains .git, .hg, .svn
+let g:ctrlp_working_path_mode = 2
+
+" map to toggle Tagbar
+nmap <silent> <leader><leader>tb :Tagbar<cr>
+
+" IndentLines config
+nmap <leader>il :IndentLinesToggle<cr>
+" You also can use other characters:
+"                  | ¦ ┆ │
+let g:indentLine_char = '│'
+" let g:indentLine_char = '┊'
+
+" You also can use other characters:˽˰··
+let g:indentLine_leadingSpaceChar = '˽'
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size = 1
+
+" Syntastic symbols
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_aggregate_errors = 0
+
+highlight SyntasticErrorSign ctermfg=196 guifg=Red
+highlight SyntasticWarningSign ctermfg=221 cterm=bold guifg=Yellow
+
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+" poweline symbols                                                                                 
+let g:airline_powerline_fonts=1
+" let g:airline_left_sep = ''                                                                        
+" let g:airline_left_alt_sep = ''                                                                    
+" let g:airline_right_sep = ''                                                                       
+" let g:airline_right_alt_sep = ''                                                                   
+let g:airline_symbols.branch = ''                                                                  
+let g:airline_symbols.readonly = ''                                                                
+let g:airline_symbols.linenr = ''
+
+let g:airline_mode_map = {                                                                                     
+			\ '__' : '-',                                                                                              
+			\ 'n'  : 'N',                                                                                              
+			\ 'i'  : 'I',                                                                                              
+			\ 'R'  : 'R',                                                                                              
+			\ 'c'  : 'C',                                                                                              
+			\ 'v'  : 'V',                                                                                              
+			\ 'V'  : 'V',                                                                                              
+			\ '^V' : 'V',                                                                                              
+			\ 's'  : 'S',                                                                                              
+			\ 'S'  : 'S',                                                                                              
+			\ '^S' : 'S',                                                                                              
+			\ }
+
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Run the current file with rspec
+" map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR>
