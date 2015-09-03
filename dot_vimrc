@@ -326,7 +326,7 @@ nmap <leader><leader>s :set ts=4 sts=4 sw=4 et<cr>
 " space to command mode
 nmap <space> :
 
-nnoremap <Leader><Leader>B :bdelete<cr>
+nnoremap <leader><leader>B :bdelete<cr>
 map <leader>F :Ack<space>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
