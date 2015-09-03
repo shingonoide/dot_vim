@@ -476,3 +476,8 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 " let use Ag with ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
